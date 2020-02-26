@@ -1,17 +1,23 @@
-<%= form_for [@spot, @review] do |f| %>
-<%= f.hidden_field :user_id, :value => @user.id %>
-<br>
-<%= f.label "title" %>
-<%= f.text_field :title %>
-<br>
-<%= f.label "Content" %>
-<%= f.text_area :content %>
-<br>
-<%= f.label "Rating" %>
-<%= f.text_field :rating %>
-<br>
-<%= f.label "Heat Level" %>
-<%= f.text_field :heat_lvl %>
-<hr>
-<p><%= f.submit %></p>
-<% end %>
+<div class="review_page">
+
+  <div class="review_form">
+    <%= form_for [@spot, @review] do |f| %>
+    <%= f.hidden_field :user_id, :value => @user.id %>
+    <br>
+    <%= f.label "title" %>
+    <%= f.text_field :title %>
+    <br>
+    <%= f.label "Rating" %>
+    <%= f.text_field :rating %>
+    <br>
+    <%= f.label "Heat Level" %>
+    <%= f.text_field :heat_lvl %>
+    <br>
+    <%= f.label "Content" %>
+    <%= f.text_area :content %>
+
+    <p><%= f.submit %></p>
+    <% end %>
+  </div>
+  <h1 class="hero_text">*<%= @spot.name %>*</h1>
+</div>

@@ -1,0 +1,37 @@
+.review_page {
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.review_form label {
+  font-size: 20px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.review_form input {
+  width: 75%;
+  margin-bottom: 20px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: rgba(50,50,50, .80);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.review_form textarea {
+  background-color: rgba(50,50,50, .80);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  width: 175%;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.hero_text {
+  text-shadow: 3px 3px rgb(75,75,0);
+}

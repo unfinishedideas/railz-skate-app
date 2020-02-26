@@ -5,7 +5,8 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: url(https://i.ya-webdesign.com/images/pachuco-drawing-skull-3.png);
+  // background-image: src('./../images/backgroundSkull.png');
+  background-image: url(backgroundSkull.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
@@ -26,6 +27,9 @@ h3 {
   text-shadow: black 2px 2px;
 
 }
+.navbiscuit {
+  font-size: 20px;
+}
 
 .titleBanner {
   background-color: yellow;
@@ -35,8 +39,8 @@ h3 {
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  // font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 15px;
   line-height: 18px;
 }
 
@@ -48,6 +52,8 @@ pre {
 
 a {
   color: red;
+  font-size: 20px;
+  margin-right: 10px;
 
   &:visited {
     color: pink;
@@ -85,8 +91,10 @@ div {
 
 .container {
   padding: 4%;
-  border: 2px solid white;
-  border-radius: 15px;
+  // border: 6px solid rgb(255,255,255);
+  border: 8px solid yellow;
+  border-radius: 20px;
+
 }
 
 #error_explanation {

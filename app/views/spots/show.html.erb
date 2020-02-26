@@ -8,23 +8,53 @@
 </script>
 <% end %>
 
-<p id="notice"><%= notice %></p>
 <h1><%= @spot.name %></h1>
-<strong>Current Weather Conditions:</strong>
-<%= @response["weather"][0]["description"].titleize %>,
-<% temp_c = (((@response["main"]["temp"] - 273.15) * (9/5)) + 32) %>
-<%= temp_c.round %> °F
+<div class="top_row">
+
+  <div class="weather_text">
+    <p id="notice"><%= notice %></p>
+    <strong>Current Weather Conditions:</strong>
+    <%= @response["weather"][0]["description"].titleize %>,
+    <% temp_c = (((@response["main"]["temp"] - 273.15) * (9/5)) + 32) %>
+    <%= temp_c.round %> °F
+
+    <div class="basic_map" id="map"></div>
+
+    <div class="rating_box">
+      <p>Average rating:</p>
+      <p>
+        <% @rating_array.each do |image| %>
+        <span><%= image_tag("skateboard.png", class: "skate_icon", alt: "skateboard icon")%></span>
+        <% end %>
+      </p>
 
 
-<div class="photo_box">
-<% if @spot.photos.attached? %>
-<% @spot.photos.each do |photo| %>
-    <span><%= image_tag(photo, :class => "photo") %></span>
-  <% end %>
-  <% else %>
-  No photos for this spot.
-<% end %>
-</div>
+      <p>Cop watch:</p>
+      <p>
+        <% @heat_array.each do |image| %>
+        <span><%= image_tag("cuffs.png", class: "skate_icon")%></span>
+        <% end %>
+      </p>
+    </div>
+    <div class="spot_info_text">
+      <p>
+        <strong>Spot Type</strong>
+        <%= @spot.spot_type %>
+      </p>
+      <p>
+        <strong>Features</strong>
+        <%= @spot.features %>
+      </p>
+      <p>
+        <strong>Description</strong>
+        <%= @spot.description %>
+      </p>
+    </div>
+
+        <%= link_to 'Edit', edit_spot_path(@spot) %>
+        <%= link_to 'Add review', new_spot_review_path(@spot) %>
+        <%= link_to 'Back', spots_path %>
+  </div>
 
 
 <div class="review_box">
@@ -32,10 +62,12 @@
   <h3>Reviews</h3>
   <ul>
     <% @reviews.each do |review| %>
-    <li>
+    <li class="review_text">
       <a href="/spots/<%= @spot.id %>/reviews/<%= review.id %>"><%= review.title %></a>
-      <h5>Rating: <%= review.rating %></h5>
-      <h5>Heat level: <%= review.heat_lvl %></h5>
+      <div class="rating_text">
+        <h5>Rating: <%= review.rating %></h5>
+        <h5>Cop watch: <%= review.heat_lvl %></h5>
+      </div>
       <p><%= review.content %></p>
     </li>
     <% end %>
@@ -43,55 +75,15 @@
   <% else %>
   <h3>No reviews!</h3>
   <% end %>
+
+  <div class="photo_box">
+    <% if @spot.photos.attached? %>
+    <% @spot.photos.each do |photo| %>
+    <span><%= image_tag(photo, :class => "photo") %></span>
+    <% end %>
+    <% else %>
+    ?!No photos for this spot!?
+    <% end %>
+  </div>
 </div>
-
-
-<p>
-  <div class="basic_map" id="map"></div>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @spot.lat %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  <strong>Longitude:</strong>
-  <%= @spot.lon %>
-</p>
-<p>
-  Average rating:
-</p>
-<p>
-  <% @rating_array.each do |image| %>
-  <span><img class="skate_icon" src="<%=image%>" alt="star"></span>
-  <% end %>
-</p>
-<br>
-<p>
-  Cop watch:
-</p>
-<p>
-  <% @heat_array.each do |image| %>
-  <span><img class="skate_icon" src="<%=image%>" alt="star"></span>
-  <% end %>
-</p>
-
-
-
-<p>
-  <strong>Spot Type</strong>
-  <%= @spot.spot_type %>
-</p>
-<p>
-  <strong>Features</strong>
-  <%= @spot.features %>
-</p>
-<p>
-  <strong>Description</strong>
-  <%= @spot.description %>
-</p>
-
-
-
-<p>
-  <%= link_to 'Edit', edit_spot_path(@spot) %>
-  <%= link_to 'Add review', new_spot_review_path(@spot) %>
-  <%= link_to 'Back', spots_path %>
+</div>

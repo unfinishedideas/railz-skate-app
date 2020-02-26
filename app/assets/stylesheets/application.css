@@ -22,13 +22,17 @@ font-family: 'Sedgwick Ave', cursive; */
 
 
 body {
-font-family: 'Sedgwick Ave Display', cursive;
+font-family: 'Sedgwick Ave', cursive;
 
 }
 .logIn {
 	color: red;
 	text-align: center;
 	font-size: 25px;
+	background-color: rgba(50,50,50,.75);
+	border-radius: 20px;
+	border: 8px rgb(50,200,50) solid;
+	padding: 40px;
 }
 .sButton {
 	height: 30px;
@@ -42,6 +46,9 @@ font-family: 'Sedgwick Ave Display', cursive;
 .spotHead {
 	font-size: 35px;
 	padding-bottom: 22px;
+}
+.alerts {
+	  margin-top: 16px;
 }
 
 .subTitle {

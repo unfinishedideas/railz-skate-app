@@ -16,8 +16,8 @@ class SpotsController < ApplicationController
   def show
     @response = HTTParty.get("https://api.openweathermap.org/data/2.5/weather?lat=#{@spot.lat}&lon=#{@spot.lon}&appid=#{Rails.application.credentials.weather_api_key}")
     @reviews = @spot.reviews
-    heat_img = 'https://www.iconsdb.com/icons/preview/red/handcuffs-xxl.png'
-    rating_img = 'https://lh3.googleusercontent.com/proxy/9-wxcpu48pZbd4f6LMK67Qf7ZSCvM_uIPXR2FoW6HW32wsT0F1R0OVBxax8FmjxNUc_mgH4e4gtAHBMps1cpCXC98ItWjzAArgTzjC5T4Mi_73xCZJbAuyeB4XhD_r__T1gy3vNfDhrbBKiD0Kg'
+    heat_img = 'cuffs.png'
+    rating_img = 'skateboard.png'
     @rating_array = []
     @heat_array = []
     @avg_rating = 0

@@ -26,8 +26,6 @@ _https://github.com/3t8U/railz_demo_
 
 * _Clone repository from git hub_
 
-* _Email one of the authors for the master.key file and security permissions
-
 * _From terminal run "Bundle Install"_
 
 * _From terminal run "rake db:setup"_
