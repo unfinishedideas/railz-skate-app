@@ -13,13 +13,18 @@ _This application stores data on skate spots. It allows the user to view, create
 
 _https://github.com/3t8U/railz_demo_
 
-##Specs
+## Specs
 
 * _The application allows the user to locate, create, rate, review & update skate spots anywhere in the world _
 
 * _The application allows the user to assign, read, update and destroy volunteers for projects_
 
+## Deployment
+This project is deployed on Heroku at:
 
+You can log in with:  
+login name: __test@test.com__  
+password: __123__  
 
 
 ## Setup/Installation Requirements

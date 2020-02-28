@@ -23,6 +23,12 @@ admin = User.create!(
   :password => '123',
   :admin => true)
 
+ testUser = User.create!(
+  :user_name => 'testUser',
+  :email => 'test@test.com',
+  :password => '123',
+  :admin => true)
+
   10.times do |index|
     user = User.create!(
       :user_name => "#{unique}_" + Faker::Superhero.name,

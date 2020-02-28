@@ -66,8 +66,8 @@ function initMap2() {
 
     // if not defined create default position
     if (!lat || !lng){
-        lat=51.5;
-        lng=-0.125;
+        lat=45.520818;
+        lng=-122.677441;
         document.getElementById('spot_lat').value = lat;
         document.getElementById('spot_lon').value = lng;
     }
