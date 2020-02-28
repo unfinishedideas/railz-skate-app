@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-require 'pry'
 
 Spot.destroy_all
 Review.destroy_all

@@ -1,4 +1,3 @@
-require 'pry'
 
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
