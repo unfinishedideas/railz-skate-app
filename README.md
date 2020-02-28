@@ -20,7 +20,7 @@ _https://github.com/3t8U/railz_demo_
 * _The application allows the user to assign, read, update and destroy volunteers for projects_
 
 ## Deployment
-This project is deployed on Heroku at:
+This project is deployed on Heroku at: https://damp-basin-71037.herokuapp.com/
 
 You can log in with:  
 login name: __test@test.com__  
